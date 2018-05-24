@@ -41,7 +41,11 @@ gem 'devise'
 
 gem 'figaro', '1.0'
 
-gem 'factory_bot'
+gem 'factory_bot_rails', '~> 4.0'
+
+group :test do 
+  gem 'nyan-cat-formatter'
+end
 
 group :development do
   gem 'listen', '~> 3.0.5'
