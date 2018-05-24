@@ -43,6 +43,8 @@ gem 'figaro', '1.0'
 
 gem 'factory_bot_rails', '~> 4.0'
 
+gem 'shoulda'
+
 group :test do 
   gem 'nyan-cat-formatter'
 end
