@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :wiki do
-    title "New Wiki"
-		body  "New wiki body"
+		title "Intelligent topic"
+		body "Super intelligent explanation"
 		private false
 		user
 	end
