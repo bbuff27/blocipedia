@@ -45,6 +45,8 @@ gem 'factory_bot_rails', '~> 4.0'
 
 gem 'shoulda'
 
+gem 'pundit'
+
 group :test do 
   gem 'nyan-cat-formatter'
 end
