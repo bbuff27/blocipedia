@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
-  get 'wikis/index'
-
-  get 'wikis/show'
-
-  get 'wikis/edit'
-
-  get 'wikis/new'
-
-  get 'wikis/destroy'
+  resources :wikis
 
   devise_for :users
 
