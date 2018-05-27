@@ -12,10 +12,12 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
+    authorize @wiki
   end
 
   def new
     @wiki = Wiki.new
+    authorize @wiki
   end
 
   def create
@@ -23,6 +25,8 @@ class WikisController < ApplicationController
     @wiki.title = params[:wiki][:title]
     @wiki.body = params[:wiki][:body]
     @wiki.user = current_user
+
+    authorize @wiki
 
     if @wiki.save
       flash[:notice] = "Your new wiki has been saved"
@@ -38,6 +42,8 @@ class WikisController < ApplicationController
     @wiki.title = params[:wiki][:title]
     @wiki.body = params[:wiki][:body]
 
+    authorize @wiki
+
     if @wiki.save
       flash[:notice] = "Your wiki has been updated"
       redirect_to @wiki
@@ -49,6 +55,8 @@ class WikisController < ApplicationController
 
   def destroy
     @wiki = Wiki.find(params[:id])
+
+    authorize @wiki
     if @wiki.destroy
       flash[:notice] = "Your wiki has been updated"
       redirect_to wikis_path
