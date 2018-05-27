@@ -48,6 +48,7 @@ gem 'shoulda'
 gem 'pundit'
 
 group :test do 
+  gem 'pundit-matchers', '~> 1.6.0'
   gem 'nyan-cat-formatter'
 end
 
